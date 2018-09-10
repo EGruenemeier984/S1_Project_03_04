@@ -1,5 +1,6 @@
 ﻿/* Defined the character set to use for the CSS sheet. */
 @charset "utf-8";
+
 /*Added two fonts in using the @font-face rule so they can be used later in the document.*/
 @font-face {
     font-family: Champagne;
@@ -7,6 +8,7 @@
     font-family: Dobkin;
     src: url('DobkinPlain.woff') format('woff'), url('DobkinPlain.ttf') format('ttf');
 }
+
 /*
    New Perspectives on HTML5 and CSS3, 7th Edition
    Tutorial 2
@@ -20,125 +22,144 @@
 
 */
 /* This affects the space any where there isn't content and makes the background color and rgba value. */
-html{
+html {
     background-color: rgb(216, 187, 143);
 }
+
 /* This affects the body and makes the font a google font called Heebo then sets the background color of an rgb value. */
-body{
+body {
     font-family: 'Heebo', sans-serif;
     background-color: rgb(193, 181, 167);
 }
+
 /* This affects unordered lists in a nav in a header and makes the display type grid then sets the space for grid columns. Makes the discs go away from the 
 list then makes padding 10px all around. Finally makes margins 0px all around and set background color to a hex value along with making the overflow hidden.*/
-header nav ul{
+header nav ul {
     display: grid;
     grid-template-columns: .2fr .25fr .25fr .25fr .25fr .25fr;
     list-style-type: none;
     padding: 10px;
     margin: 0px;
     overflow: hidden;
-    background-color:#333;
+    background-color: #333;
 }
+
 /* This affects the links in a unordered lists that are in a header and makes the text color whitesmoke and then takes the underline away from the link.*/
-header ul a{
+header ul a {
     color: whitesmoke;
     text-decoration: none;
 }
+
 /* This affects the links when a user is hovering over them in a list item in a unordered list that is in a header and makes the display type block and the 
 the color an rgb value plus gets rid of the underline. */
-header ul li a:hover{
+header ul li a:hover {
     display: block;
     color: rgb(165, 127, 108);
     text-decoration: none;
 }
+
 /* This affects the h1's that are direct children of the id leftcol and makes the font Dobkin and the font size 4em then makes the margins 15px all around. */
 #leftcol>h1 {
     font-family: Dobkin, serif;
     font-size: 4em;
     margin: 15px;
 }
+
 /* This affects the p tags in an id called leftcol and makes the margins on the left 20px. */
-#leftcol p{
+#leftcol p {
     margin-left: 20px;
 }
+
 /* This affects the h2's that are direct children of an aside that is a direct child of the id leftcol and makes the font size 1em. */
-#leftcol>aside>h2{
+#leftcol>aside>h2 {
     font-size: 1em;
 }
+
 /* This affects the first aside that is a direct child of the id leftcol and makes the background color an rgb value. Makes the padding 10px on right and left
 then makes the corners rounded by the radius of 10px. */
-#leftcol>aside:first-of-type{
+#leftcol>aside:first-of-type {
     background-color: rgb(165, 127, 108);
     padding: 0px 10px 0px 10px;
     border-radius: 10px;
+    box-shadow: 10px 10px #333;
 }
-/*  */
-#leftcol>aside>ul>li{
+
+/*Affects the list items that are direct children of the unordered lists that are direct children if the aside element that is a direct child of the id leftcol. Makes the bullets of the list appear as squares*/
+#leftcol>aside>ul>li {
     list-style-type: square;
 }
 
-#leftcol>aside a{
+/* Affects the links in an aside element that is a direct child of the id leftcol. This makes the color an rgb value and the text decoration whitesmoke underline.*/
+#leftcol>aside a {
     color: rgb(242, 237, 233);
     text-decoration: underline whitesmoke;
 }
 
+/* Affects the h1's that are direct children of the asdie element that is a direct child of the id leftcol. This centers the headings. */
 #leftcol>aside:first-of-type>h1,
-#leftcol>aside:nth-of-type(2)>h1{
+#leftcol>aside:nth-of-type(2)>h1 {
     text-align: center;
 }
 
-#leftcol>aside:nth-of-type(2){
+/* This affects the 2nd aside that is a direct child of the id leftcol. This makes the background color an rgb value with an opacity value to make it semi-transparent. Also adds 10px of padding on the right and left. Also rounds the corners of the box with a border radius of 10px. */
+#leftcol>aside:nth-of-type(2) {
     background-color: rgba(216, 187, 143, 0.6);
     padding: 0px 10px 0px 10px;
     border-radius: 10px;
+    box-shadow: 10px 10px #333;
 }
 
-#rightcol{
+/* Affects the id rightcol and makes the text color whitesmoke and the background color and rgb value with an opacity value so its semi-transparent. Also adds 20px of padding to the top and bottom and 40px to left. */
+#rightcol {
     color: whitesmoke;
     background-color: rgba(73, 73, 72, 0.8);
     padding: 20px 0px 20px 40px;
 }
 
-blockquote{
+/* This affects the blockquotes and adds the character code for quotes and makes the font size 1.12em.  */
+blockquote {
     quotes: '\201C';
     font-size: 1.12em;
+    font-family: Champagne, serif;
 }
 
-#rightcol>blockquote::before{
+/* This affects the blockquote at the beginning of the text that is a direct child of the id rightcol. This makes the padding on the top 40px and the font size 1.5em and makes the quote appear in front of the blockquote text. */
+#rightcol>blockquote::before {
     padding-top: 40px;
     font-size: 1.5em;
     content: open-quote;
 }
 
-#rightcol>blockquote::after{
+/* This affects the blockquote at the end of the text that is a direct child of the id rightcol and makes the padding on the top 40px and the font size 1.5em and makes the closing quote appear at the end of the blockquote text. */
+#rightcol>blockquote::after {
     padding-top: 40px;
     font-size: 1.5em;
     content: close-quote;
 }
 
-#rightcol>nav>ul a{
+/* This affects the links in an unordered list that is a direct child of a nav thats also a direct child of the id rightcol. This makes the text color whitesmoke and the text-decoration none so the line doesn't appear underneath the link. Also changes the space between the links.*/
+#rightcol>nav>ul a {
     color: whitesmoke;
     text-decoration: none;
+    line-height: 2em;
 }
 
-#rightcol>nav>ul a:hover{
+/* This affects the links when a user hovers over it that in a unordered list thats a direct child of the nav thats also a direct child of the id rightcol. The text color in changed to an rgb value and then gets rid of the underline. */
+#rightcol>nav>ul a:hover {
     color: rgb(165, 127, 108);
     text-decoration: none;
 }
 
-#rightcol>nav>ul li{
+/* Affects the list items in the unordered list that is a direct child of the nav that is a direct child of the id rightcol and makes the bullets disapper. */
+#rightcol>nav>ul li {
     list-style-type: none;
 }
 
-footer{
+/* This affects the content in the footer element and makes the text align to the center of the page and the background color a hex value. Also makes the text color witesmoke, changes font to CHampagne serif and adds the 10px of padding to the top and bottom. */
+footer {
     text-align: center;
     background-color: #333;
     color: whitesmoke;
     font-family: Champagne, serif;
     padding: 10px 0px 10px 0px;
 }
-
-
-
-
-
