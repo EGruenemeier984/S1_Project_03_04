@@ -27,16 +27,16 @@ body > header > img {
 }
 
 body > section#leftcol {
-	width: 70%;
+	width: 69%;
 	float: left;
-	margin-left: 0%;
-	margin-right: 4%;
+	/* margin-left: 0%;
+	margin-right: 4%; */
 }
 
 body > section#rightcol {
-	width: 24%;
+	width: 31.001%;
 	float: left;
-	margin-right: 2%;
+	margin-left: 0;
 }
 
 footer {

@@ -1,0 +1,144 @@
+﻿/* Defined the character set to use for the CSS sheet. */
+@charset "utf-8";
+/*Added two fonts in using the @font-face rule so they can be used later in the document.*/
+@font-face {
+    font-family: Champagne;
+    src: url('cac_champagne.woff') format('woff'), url('cac_champagne.ttf') format('tff');
+    font-family: Dobkin;
+    src: url('DobkinPlain.woff') format('woff'), url('DobkinPlain.ttf') format('ttf');
+}
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 2
+   Case Problem 4
+   
+   Great Lakescape Lodge Style Sheet
+   Author: Ethan Gruenemeier
+   Date: 9.8.18
+   
+   Filename: lake_styles.css
+
+*/
+/* This affects the space any where there isn't content and makes the background color and rgba value. */
+html{
+    background-color: rgb(216, 187, 143);
+}
+/* This affects the body and makes the font a google font called Heebo then sets the background color of an rgb value. */
+body{
+    font-family: 'Heebo', sans-serif;
+    background-color: rgb(193, 181, 167);
+}
+/* This affects unordered lists in a nav in a header and makes the display type grid then sets the space for grid columns. Makes the discs go away from the 
+list then makes padding 10px all around. Finally makes margins 0px all around and set background color to a hex value along with making the overflow hidden.*/
+header nav ul{
+    display: grid;
+    grid-template-columns: .2fr .25fr .25fr .25fr .25fr .25fr;
+    list-style-type: none;
+    padding: 10px;
+    margin: 0px;
+    overflow: hidden;
+    background-color:#333;
+}
+/* This affects the links in a unordered lists that are in a header and makes the text color whitesmoke and then takes the underline away from the link.*/
+header ul a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+/* This affects the links when a user is hovering over them in a list item in a unordered list that is in a header and makes the display type block and the 
+the color an rgb value plus gets rid of the underline. */
+header ul li a:hover{
+    display: block;
+    color: rgb(165, 127, 108);
+    text-decoration: none;
+}
+/* This affects the h1's that are direct children of the id leftcol and makes the font Dobkin and the font size 4em then makes the margins 15px all around. */
+#leftcol>h1 {
+    font-family: Dobkin, serif;
+    font-size: 4em;
+    margin: 15px;
+}
+/* This affects the p tags in an id called leftcol and makes the margins on the left 20px. */
+#leftcol p{
+    margin-left: 20px;
+}
+/* This affects the h2's that are direct children of an aside that is a direct child of the id leftcol and makes the font size 1em. */
+#leftcol>aside>h2{
+    font-size: 1em;
+}
+/* This affects the first aside that is a direct child of the id leftcol and makes the background color an rgb value. Makes the padding 10px on right and left
+then makes the corners rounded by the radius of 10px. */
+#leftcol>aside:first-of-type{
+    background-color: rgb(165, 127, 108);
+    padding: 0px 10px 0px 10px;
+    border-radius: 10px;
+}
+/*  */
+#leftcol>aside>ul>li{
+    list-style-type: square;
+}
+
+#leftcol>aside a{
+    color: rgb(242, 237, 233);
+    text-decoration: underline whitesmoke;
+}
+
+#leftcol>aside:first-of-type>h1,
+#leftcol>aside:nth-of-type(2)>h1{
+    text-align: center;
+}
+
+#leftcol>aside:nth-of-type(2){
+    background-color: rgba(216, 187, 143, 0.6);
+    padding: 0px 10px 0px 10px;
+    border-radius: 10px;
+}
+
+#rightcol{
+    color: whitesmoke;
+    background-color: rgba(73, 73, 72, 0.8);
+    padding: 20px 0px 20px 40px;
+}
+
+blockquote{
+    quotes: '\201C';
+    font-size: 1.12em;
+}
+
+#rightcol>blockquote::before{
+    padding-top: 40px;
+    font-size: 1.5em;
+    content: open-quote;
+}
+
+#rightcol>blockquote::after{
+    padding-top: 40px;
+    font-size: 1.5em;
+    content: close-quote;
+}
+
+#rightcol>nav>ul a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+#rightcol>nav>ul a:hover{
+    color: rgb(165, 127, 108);
+    text-decoration: none;
+}
+
+#rightcol>nav>ul li{
+    list-style-type: none;
+}
+
+footer{
+    text-align: center;
+    background-color: #333;
+    color: whitesmoke;
+    font-family: Champagne, serif;
+    padding: 10px 0px 10px 0px;
+}
+
+
+
+
+
