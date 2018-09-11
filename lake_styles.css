@@ -21,9 +21,9 @@
    Filename: lake_styles.css
 
 */
-/* This affects the space any where there isn't content and makes the background color and rgba value. */
+/* This affects the space any where there isn't content and makes the background color a gradient with 2 rgb values. */
 html {
-    background-color: rgb(216, 187, 143);
+    background-image: linear-gradient(rgb(216, 187, 143), rgb(165, 127, 108));
 }
 
 /* This affects the body and makes the font a google font called Heebo then sets the background color of an rgb value. */
@@ -63,11 +63,19 @@ header ul li a:hover {
     font-family: Dobkin, serif;
     font-size: 4em;
     margin: 15px;
+    text-shadow: 5px 3px 5px rgb(165, 127, 108)
 }
 
 /* This affects the p tags in an id called leftcol and makes the margins on the left 20px. */
 #leftcol p {
     margin-left: 20px;
+}
+
+/* This affects the images in the id of leftcol and makes the image responsive and have rounded corners. */
+#leftcol img{
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
 }
 
 /* This affects the h2's that are direct children of an aside that is a direct child of the id leftcol and makes the font size 1em. */
@@ -137,16 +145,21 @@ blockquote {
     content: close-quote;
 }
 
-/* This affects the links in an unordered list that is a direct child of a nav thats also a direct child of the id rightcol. This makes the text color whitesmoke and the text-decoration none so the line doesn't appear underneath the link. Also changes the space between the links.*/
+/* This affects the links in an unordered list that is a direct child of a nav thats also a direct child of the id rightcol. This makes the text color whitesmoke and the text-decoration none so the line doesn't appear underneath the link. Also changes the space between the links.
+Then adds the transition affects to the likns by stating font size and the amount in seconds the transitions takes and then the function ease is how it makes it smooth.*/
 #rightcol>nav>ul a {
+    -webkit-transition: font-size .25s, ease .25s;
+    transition: font-size .25s, ease 1s;
     color: whitesmoke;
     text-decoration: none;
-    line-height: 2em;
+    line-height: 2.25em;
 }
 
-/* This affects the links when a user hovers over it that in a unordered list thats a direct child of the nav thats also a direct child of the id rightcol. The text color in changed to an rgb value and then gets rid of the underline. */
+/* This affects the links when a user hovers over it that in a unordered list thats a direct child of the nav thats also a direct child of the id rightcol. The text color in changed to an rgb value and then gets rid of the underline.
+The font size will increase when its hovered over to 1.25em. */
 #rightcol>nav>ul a:hover {
-    color: rgb(165, 127, 108);
+    color: rgba(216, 187, 143, 0.6);
+    font-size: 1.25em;
     text-decoration: none;
 }
 
